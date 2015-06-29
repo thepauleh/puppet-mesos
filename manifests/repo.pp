@@ -20,7 +20,7 @@ class mesos::repo(
           undef: {} #nothing to do
           'mesosphere': {
             apt::source { 'mesosphere':
-              location => "http://repos.mesosphere.io/${distro}",
+              location => "http://repos.mesosphere.com/${distro}",
               release  => $::lsbdistcodename,
               repos    => 'main',
               key      => '81026D0004C44CF7EF55ADF8DF7D54CBE56151BF',
@@ -52,7 +52,7 @@ class mesos::repo(
                 package { 'mesosphere-el-repo':
                   ensure   => present,
                   provider => 'rpm',
-                  source   => "http://repos.mesosphere.io/el/${osrel}/noarch/RPMS/mesosphere-el-repo-${osrel}-${mrel}.noarch.rpm"
+                  source   => "http://repos.mesosphere.com/el/${osrel}/noarch/RPMS/mesosphere-el-repo-${osrel}-${mrel}.noarch.rpm"
                 }
               }
               default: {
